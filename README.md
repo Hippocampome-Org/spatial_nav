@@ -2,6 +2,9 @@
 
 This software simulates neural activites in rodents that occur during spatial navigation.
 
+## Version
+This version 1.0.
+
 ## Prerequisites
 
 [The Hippocampome (feat/ca3net) branch of CARLsim 6.0](https://github.com/UCI-CARL/CARLsim6/tree/feat/ca3net)
