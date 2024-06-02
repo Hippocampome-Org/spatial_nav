@@ -23,7 +23,7 @@ save_gridscore_file=0; % save gridscore to file
 save_firingrate_file=0;
 save_firingpeak_file=0;
 % plot adjustments
-resolution_converter=1.384083045;%1.25;%1.455; % scales the plot resolution
+resolution_converter=1;%1.384083045;%1.25;%1.455; % scales the plot resolution
 plot_shift=6;%3;%2; % shift center of plot subsection
 %%%%%%%%%%%%%%%%%%
 if ~exist('run_real_recordings','var') run_real_recordings=0; end % run parameters for real recordings
