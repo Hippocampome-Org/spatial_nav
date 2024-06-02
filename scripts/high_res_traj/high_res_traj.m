@@ -154,7 +154,8 @@ end
 if plot_smooth_rm==1
     cd ..
     heat_map=activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data,fdr_prefix,...
-        hopper_run,local_run,x,y,run_real_recordings,plot_subsect,grid_size,plot_size,save_plot);
+        hopper_run,local_run,x,y,run_real_recordings,plot_subsect,grid_size,plot_size,...
+        save_plot,alt_data,resolution_converter,plot_shift);
     cd high_res_traj
 end
 

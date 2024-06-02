@@ -3,7 +3,7 @@
 This software simulates neural activites in rodents that occur during spatial navigation.
 
 ## Version
-This is version 1.01.
+This is version 1.02.
 
 ## Prerequisites
 

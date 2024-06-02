@@ -14,7 +14,8 @@
 %% https://www.mathworks.com/matlabcentral/answers/43326-create-figure-without-displaying-it
 
 function heat_map = activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data, ...
-    fdr_prefix,hopper_run,local_run,x,y,run_real_recordings,plot_subsect,grid_size,plot_size,save_plot)
+    fdr_prefix,hopper_run,local_run,x,y,run_real_recordings,plot_subsect,grid_size, ...
+    plot_size,save_plot,alt_data,resolution_converter,plot_shift)
 	import CMBHOME.Utils.*
 
 	%[root c_ts] = load_spike_times();
@@ -32,7 +33,7 @@ function heat_map = activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data
 	limit_time = 0;
 	rot90deg = 0; % rotate matrix 90 degrees clockwise
 	flip_vert = 0; % flip matrix vertically
-    real_env_size=360; % units of real animal enviornment from recordings
+    real_env_size=360; % units of real animal environment from recordings
     conversion_factor=660; % factor for converting from real recordings
     timestep=20; % recordings timestep of samples in ms
 
@@ -80,8 +81,8 @@ function heat_map = activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data
 			spike_y = carlsim_spikes(1:end,2);
 		else
 			if use_carlsim_spikes
-				spike_x = carlsim_spikes(1:end,3);
-				spike_y = carlsim_spikes(1:end,2);
+				spike_x = carlsim_spikes(1:end,3)*resolution_converter;
+				spike_y = carlsim_spikes(1:end,2)*resolution_converter;
                 if run_real_recordings==1
                     spike_x=(spike_x-conversion_factor)*(grid_size/real_env_size);
                     spike_y=spike_y*(grid_size/real_env_size);
@@ -174,10 +175,10 @@ function heat_map = activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data
 			heat_map = hist3([spike_x,spike_y],'Edges',{xdim, ydim2});
             if run_real_recordings==0 heat_map = heat_map*timestep; end
             if plot_subsect
-			    s = ((grid_size-plot_size)/2);
-			    e = plot_size+s;
-                %s = s +2;
-                %e = e +2;
+			    s = ceil(((grid_size-plot_size)/2));
+			    e = ceil(plot_size+s);
+                 s = s + plot_shift;%3;%2;
+                 e = e + plot_shift;%3;%2;
                 if occupancy_norm
 			        occupancy = occupancy(s:e, s:e); % crop to intended plot size
 			        no_occupancy = no_occupancy(s:e, s:e); % crop to intended plot size
@@ -243,7 +244,9 @@ function heat_map = activity_image_phys_spc_smooth(run_on_hopper,use_hopper_data
 		%caxis([0 160])
 	    %caxis([0 80])
 	    %caxis([0 30])
-		caption = sprintf('Physical space grid cell firing, total t = %.0f ms', carlsim_spikes(end,1));
+		%caption = sprintf('Physical space grid cell firing, total t = %.0f ms', carlsim_spikes(end,1));
+        %caption = sprintf('Physical space grid cell firing, total t = %.0f ms', length(x)*20);
+        caption = sprintf('Physical space grid cell firing, total t = %.0f ms', length(x));
         %caption = sprintf('Physical space grid cell firing, cell=41');
 	else
 		caxis([0 25])
