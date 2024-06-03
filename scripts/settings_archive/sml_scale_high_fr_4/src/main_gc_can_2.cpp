@@ -133,8 +133,8 @@ int main() {
 	if (p.print_conn_stats) {for (int i = 0; i < p.layer_size_in; i++) {p.gc_conns.push_back(0);}}
 	#if hopper_run
 		#if import_animal_data
-			vector<double> anim_angles = ParseCSV(p.anim_angles_csv);
-			vector<double> anim_speeds = ParseCSV(p.anim_speeds_csv);
+			vector<double> anim_angles = ParseCSV(p.anim_angles_csv, &p, 0);
+			vector<double> anim_speeds = ParseCSV(p.anim_speeds_csv, &p, 1);
 		#endif
 	#endif
 

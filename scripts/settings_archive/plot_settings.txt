@@ -31,6 +31,7 @@ fr: sim: 2.1 Hz real: 2.1 Hz
 Note: uses speed_params_range124.txt and generate_weights_alt6.m with filter_highval = 0.
 github commit "large fields first med avg fr reference version. 2.1Hz in real and sim results using neuron 1187 in sim. confirmed results with animal data."
 
+(note 06/03/24: the below settings were updated for the article figure yet not updated in this document yet)
 Medium fields alt (for diff. gridscore in bottom panel of Fig. 3):
 High gridscore:
 Neuron for plotting: 1135
