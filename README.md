@@ -25,7 +25,7 @@ This software was used in the article:
 <br>[Docs site](https://hco-dev-docs.readthedocs.io/en/latest/spatial_nav/overview.html)
 <br>
 ## Developer site
-A site for a developer of this software is [here](https://www.nsutton.com)
+A site for a developer of this software is [here](https://www.nsutton.com).
 <br>
 <br>
 <br>
