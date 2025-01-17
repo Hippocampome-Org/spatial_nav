@@ -5,6 +5,10 @@ This software simulates neural activites in rodents that occur during spatial na
 ## Version
 This is version 1.03.
 
+## Article
+This software was used in the article:
+Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2024). A Continuous Attractor Model with Realistic Neural and Synaptic Properties Quantitatively Reproduces Grid Cell Physiology. International Journal of Molecular Sciences, 25(11), 6059.
+
 ## Prerequisites
 
 [The Hippocampome (feat/ca3net) branch of CARLsim 6.0](https://github.com/UCI-CARL/CARLsim6/tree/feat/ca3net)
@@ -19,6 +23,9 @@ This is version 1.03.
 
 [Initial run instructions](https://hco-dev-docs.readthedocs.io/en/latest/spatial_nav/initial_run.html)
 <br>[Docs site](https://hco-dev-docs.readthedocs.io/en/latest/spatial_nav/overview.html)
+<br>
+## Developer site
+A site for a developer of this software is [here](https://www.nsutton.com)
 <br>
 <br>
 <br>
