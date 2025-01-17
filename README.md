@@ -7,7 +7,7 @@ This is version 1.03.
 
 ## Article
 This software was used in the article:
-<be>Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2024). A Continuous Attractor Model with Realistic Neural and Synaptic Properties Quantitatively Reproduces Grid Cell Physiology. International Journal of Molecular Sciences, 25(11), 6059.
+<br>Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2024). A Continuous Attractor Model with Realistic Neural and Synaptic Properties Quantitatively Reproduces Grid Cell Physiology. International Journal of Molecular Sciences, 25(11), 6059.
 
 ## Prerequisites
 
