@@ -5,9 +5,12 @@ This software simulates neural activites in rodents that occur during spatial na
 ## Version
 This is version 1.03.
 
-## Article
+## Articles
 This software was used in the article:
 <br>Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2024). A Continuous Attractor Model with Realistic Neural and Synaptic Properties Quantitatively Reproduces Grid Cell Physiology. International Journal of Molecular Sciences, 25(11), 6059. https://doi.org/10.3390/ijms25116059
+
+Some results from the simulation can be plotted and analyzed with the GridMet software in:
+<br>Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2025). Automated Measurement of Grid Cell Firing Characteristics. Algorithms, 18(3), 139. https://doi.org/10.3390/a18030139
 
 ## Prerequisites
 
